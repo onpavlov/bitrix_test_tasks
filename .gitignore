@@ -1,0 +1,24 @@
+/upload/
+web.config
+.htaccess
+/bitrix/
+/.idea/
+*.sql
+/include
+
+# Ignore migrations files
+/local/migrations/db_migration/config.php
+/local/migrations/content/
+
+#ignore composer files
+local/lib/vendor/
+composer.phar
+composer.lock
+
+# Ignore SQL files in root
+/*.sql
+
+# Ignore tar.gz files in root
+*.tar.gz
+
+*.xml
