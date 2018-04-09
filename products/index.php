@@ -7,7 +7,7 @@ $APPLICATION->SetTitle("Каталог");
         'custom:catalog',
         '',
         [
-            'IBLOCK_ID' => '',
+            'IBLOCK_ID' => getIblockIdByCode('catalog'),
             'SEF_MODE' => 'Y',
             'SEF_FOLDER' => '/products/',
             'CACHE_TIME' => 3600,
