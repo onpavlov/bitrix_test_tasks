@@ -171,6 +171,30 @@ class CatalogFill20180406145805085744 extends BitrixMigration
                     ]
                 ]
             ],
+            [
+                'CODE' => 'element8',
+                'NAME' => 'Коляска простая 1',
+                'SECTION_CODE' => 'strollers_on_chassis',
+                'PRICE' => 500
+            ],
+            [
+                'CODE' => 'element9',
+                'NAME' => 'Коляска простая 2',
+                'SECTION_CODE' => 'strollers_on_chassis',
+                'PRICE' => 700
+            ],
+            [
+                'CODE' => 'element10',
+                'NAME' => 'Коляска простая 3',
+                'SECTION_CODE' => 'strollers_on_chassis',
+                'PRICE' => 900
+            ],
+            [
+                'CODE' => 'element11',
+                'NAME' => 'Коляска простая 4',
+                'SECTION_CODE' => 'strollers_on_chassis',
+                'PRICE' => 1100
+            ],
         ];
 
         if (!$this->hasSections($this->iblockCatalogId)) {
