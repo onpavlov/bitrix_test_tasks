@@ -2,6 +2,8 @@
 
 class CatalogSection extends CBitrixComponent
 {
+    const DEFAULT_CACHE_TIME = 3600;
+
     public function onPrepareComponentParams($arParams)
     {
         return $arParams;
