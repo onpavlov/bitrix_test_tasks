@@ -13,6 +13,7 @@ class IblockHandlers
     public static function onAfterIBlockElementUpdate($params)
     {
         $cache = \Bitrix\Main\Application::getInstance()->getManagedCache();
-        $cache->clean('iblock_id_' . $params['IBLOCK_ID']);
+        $cache->clean('list_iblock_id_' . $params['IBLOCK_ID']);
+        $cache->clean('detail_iblock_id_' . $params['IBLOCK_ID']);
     }
 }

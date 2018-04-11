@@ -24,8 +24,10 @@ class Catalog extends CBitrixComponent
     public function onPrepareComponentParams($arParams)
     {
         foreach ($this->modules as $module) {
-            if (!\Bitrix\Main\Loader::includeModule($module)) {
-                die('Cannot include module ' . $module);
+            try {
+                \Bitrix\Main\Loader::includeModule($module);
+            } catch (\Bitrix\Main\LoaderException $e) {
+                ShowError($e->getMessage());
             }
         }
 

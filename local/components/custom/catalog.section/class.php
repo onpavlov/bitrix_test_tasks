@@ -4,8 +4,12 @@ class CatalogSection extends CBitrixComponent
 {
     const DEFAULT_CACHE_TIME = 3600;
 
+    private $iblocks;
+
     public function onPrepareComponentParams($arParams)
     {
+        $this->iblocks = getIblockIds();
+
         return $arParams;
     }
 
@@ -13,7 +17,7 @@ class CatalogSection extends CBitrixComponent
     {
         $cache = \Bitrix\Main\Application::getInstance()->getManagedCache();
         $cacheTime = empty($this->arParams['CACHE_TIME']) ? self::DEFAULT_CACHE_TIME : $this->arParams['CACHE_TIME'];
-        $cacheId = 'iblock_id_' . $this->arParams['IBLOCK_ID'];
+        $cacheId = 'detail_iblock_id_' . $this->arParams['IBLOCK_ID'];
 
         if ($cache->read($cacheTime, $cacheId)) {
             $this->arResult = $cache->get($cacheId);
